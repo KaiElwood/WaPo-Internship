@@ -1,0 +1,272 @@
+* body {
+  background: #777777;
+  display: flex;
+  color: #160f0aec;
+}
+
+#front {
+  background: url(Smiling-no-color.jpg);
+}
+#front #header {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  padding-left: 4px;
+  margin: 5%;
+  overflow: hidden;
+  object-fit: cover;
+}
+#front #header img {
+  position: relative;
+  width: 100%;
+}
+#front #text .blurb {
+  padding: 10%;
+  text-align: center;
+}
+#front #text .blurb button {
+  font-family: "Lato", sans-serif;
+  display: flex;
+  margin: 2% auto;
+  justify-content: center;
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
+  border: unset;
+  border-radius: 5px;
+  color: white;
+  padding: 5%;
+  overflow: hidden;
+}
+#front #text .blurb button:nth-of-type(1) {
+  background: #111d4a;
+}
+#front .title {
+  padding: 20px;
+  color: #111d4a;
+  text-align: center;
+}
+#front .title h2 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.75rem;
+}
+#front .title h3 {
+  font-family: "Lato", sans-serif;
+}
+
+p {
+  margin-block-start: 0;
+}
+
+#page5 div {
+  padding: 5%;
+}
+
+.page1 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+  margin-block-start: 0;
+}
+
+#page4 div {
+  padding: 5%;
+}
+
+#book {
+  margin: auto;
+  top: 5vh;
+  justify-content: center;
+  transform-style: preserve-3d;
+  position: relative;
+  height: 90vh;
+  max-height: 700px;
+  min-height: 600px;
+  width: 400px;
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+  transition: transform 1s ease-in-out;
+}
+#book #front {
+  -webkit-box-shadow: inset 2px -1px 2px 4px rgba(5, 10, 50, 0.05), inset 3px -1px 1px 1px rgba(5, 10, 50, 0.3);
+  box-shadow: inset 2px -1px 2px 4px rgba(5, 10, 50, 0.05), inset 3px -1px 1px 1px rgba(5, 10, 50, 0.3), -9px 0px 40px 9px rgba(0, 0, 0, 0.62), -20px -8px 40px 9px rgba(0, 0, 0, 0.05);
+}
+#book #front, #book #back {
+  background: url(Smiling-no-color.jpg);
+  background-size: cover;
+}
+#book #page1, #book #page2, #book #page3, #book #page4, #book #page5, #book #page6 {
+  background: #ffffff;
+  background: linear-gradient(90deg, rgba(2, 0, 36, 0.4) 0%, white 1%, white 100%);
+}
+#book > div {
+  position: absolute;
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+  transform-style: preserve-3d;
+  top: 0;
+  left: 0;
+  transform-origin: left center;
+  transition: transform 0.5s ease-in-out, box-shadow 0.35s ease-in-out, display 0.8s ease-in-out;
+}
+#book > div {
+  height: 100%;
+  width: 100%;
+}
+#book #page6 .textContainer {
+  padding: 5%;
+}
+#book #page6 .noWrap {
+  flex-wrap: unset;
+}
+#book #page6 .noWrap:first-child {
+  background: #F15B1C;
+  color: white;
+}
+
+.poems {
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+}
+.poems #front {
+  transform: rotateY(-180deg);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
+}
+.poems #page1 {
+  transform: rotateY(-172deg);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
+}
+.poems #page2 {
+  transform: rotateY(-8deg);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
+}
+.poems #page3 {
+  transform: rotateY(-170deg);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
+}
+.poems #page4 {
+  transform: rotateY(-10deg);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
+}
+.poems #page5 {
+  transform: rotateY(-165deg);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
+}
+.poems #page6 {
+  transform: rotateY(-15deg);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
+}
+.poems #back {
+  transform: rotateY(0deg);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
+}
+
+.poemsFlip {
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+}
+.poemsFlip #front {
+  transform: rotateY(-180deg);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
+}
+.poemsFlip #page1 {
+  transform: rotateY(-172deg);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
+}
+.poemsFlip #page2 {
+  transform: rotateY(-8deg);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
+}
+.poemsFlip #page3 {
+  transform: rotateY(-170deg);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
+}
+.poemsFlip #page4 {
+  transform: rotateY(-10deg);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
+}
+.poemsFlip #page5 {
+  transform: rotateY(-168deg);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
+}
+.poemsFlip #page6 {
+  transform: rotateY(-165deg);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
+}
+.poemsFlip #back {
+  transform: rotateY(0deg);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
+}
+
+.moveRight {
+  transform: translateX(50%);
+}
+
+.title {
+  padding: 30px;
+}
+
+.flex {
+  display: flex;
+}
+
+.notVisible {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  body {
+    margin: 0;
+  }
+
+  #book {
+    padding: none;
+    margin: none;
+    top: 0;
+  }
+
+  .moveRight {
+    transform: none;
+  }
+
+  .poems #front {
+    transform: rotateY(-180deg);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
+  }
+  .poems #text {
+    display: none;
+  }
+  .poems #page1 {
+    transform: rotateY(-170deg);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
+  }
+  .poems #page2 {
+    transform: rotateY(-5deg);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
+  }
+  .poems #page3 {
+    transform: rotateY(-165deg);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
+  }
+  .poems #page4 {
+    transform: rotateY(-8deg);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
+  }
+  .poems #page5 {
+    transform: rotateY(-160deg);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
+  }
+  .poems #page6 {
+    transform: rotateY(-10deg);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
+  }
+  .poems #back {
+    transform: rotateY(0deg);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.12);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

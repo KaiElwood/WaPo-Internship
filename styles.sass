@@ -1,0 +1,243 @@
+$primaryBlue: #e2f8ffd5
+$mainText: #00000f
+$backgroundColor: #777777
+$bookCover: url(Smiling-no-color.jpg)
+$titleText: #111d4a
+$red: #F15B1C
+$blue: #4C85C5
+$black: #00000F
+$nprFont: 'Allerta', sans-serif
+$textFont: 'Lato', sans-serif
+$headerSize: 1.5rem
+$bookHeight: 90vh
+$bookWidth: 33vw
+$breakpoint-mobile: 500px
+
+=border-radius($radius)
+    border-top-right-radius: $radius
+    border-bottom-right-radius: $radius
+
+=box-shadow
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .12)
+    
+*
+    body
+        background: $backgroundColor
+        display: flex
+        color: #160f0aec
+
+#front
+    background: $bookCover
+    #header
+        position: relative
+        width: 50px
+        height: 50px
+        text-align: center
+        padding-left: 4px
+        margin: 5%
+        overflow: hidden
+        object-fit: cover
+        img
+            position: relative
+            width: 100%
+    #text
+        .blurb
+            padding: 10%
+            text-align: center
+            button
+                font-family: $textFont
+                display: flex
+                margin: 2% auto
+                justify-content: center
+                @include box-shadow
+                border: unset
+                border-radius: 5px
+                color: white
+                padding: 5%
+                overflow: hidden
+            button:nth-of-type(1)
+                background: $titleText
+    .title
+        padding: 20px
+        color: $titleText
+        text-align: center
+        h2 
+            font-family: $textFont
+            font-weight: 700
+            font-style: italic
+            font-size: 1.75rem
+        h3
+            font-family: $textFont
+
+
+p 
+    margin-block-start: 0
+
+#page5
+    div
+        padding: 5%
+.page1
+    width: 100%
+    height: 100%
+    position: relative
+    transform: rotateY(180deg)
+    transform-style: preserve-3d
+    margin-block-start: 0
+#page4
+    div
+        padding: 5%
+
+#book
+    margin: auto
+    top: 5vh
+    justify-content: center
+    transform-style: preserve-3d
+    position: relative
+    height: $bookHeight
+    max-height: 700px
+    min-height: 600px
+    width: 400px
+    +border-radius(1em)
+    transition: transform 1s ease-in-out
+    #front
+        -webkit-box-shadow: inset 2px -1px 2px 4px rgba(5,10,50,.05), inset 3px -1px 1px 1px rgba(5,10,50,.3)
+        box-shadow: inset 2px -1px 2px 4px rgba(5,10,50,.05), inset 3px -1px 1px 1px rgba(5,10,50,.3), -9px 0px 40px 9px rgba(0,0,0,0.62), -20px -8px 40px 9px rgba(0,0,0,0.05)
+    #front, #back
+        background: $bookCover
+        background-size: cover
+
+    #page1, #page2, #page3, #page4, #page5, #page6
+        background: #ffffff
+        background: linear-gradient(90deg, rgba(2,0,36,.4) 0%, rgba(255,255,255,1) 1%, rgba(255,255,255,1) 100%)
+    >div
+        position: absolute
+        +border-radius(1em)
+        transform-style: preserve-3d
+        top: 0
+        left: 0
+        transform-origin: left center
+        transition: transform .5s ease-in-out, box-shadow .35s ease-in-out, display .8s ease-in-out
+    >div
+        height: 100%
+        width: 100%
+    #page6
+        .textContainer 
+            padding: 5%
+        .noWrap
+            flex-wrap: unset
+        .noWrap:first-child
+            background: $red
+            color: white
+
+
+// only apply when button is pressed
+.poems
+    +border-radius(1em)
+    #front
+        transform: rotateY(-180deg)
+        +box-shadow
+    #page1
+        transform: rotateY(-172deg)
+        +box-shadow
+    #page2
+        transform: rotateY(-8deg)
+        +box-shadow
+    #page3
+        transform: rotateY(-170deg)
+        +box-shadow
+    #page4
+        transform: rotateY(-10deg)
+        +box-shadow
+    #page5
+        transform: rotateY(-165deg)
+        +box-shadow
+    #page6
+        transform: rotateY(-15deg)
+        +box-shadow
+    #back
+        transform: rotateY(0deg)
+        +box-shadow
+
+.poemsFlip
+    +border-radius(1em)
+    #front
+        transform: rotateY(-180deg)
+        +box-shadow
+        // #text
+        //     display: none
+    #page1
+        transform: rotateY(-172deg)
+        +box-shadow
+    #page2
+        transform: rotateY(-8deg)
+        +box-shadow
+    #page3
+        transform: rotateY(-170deg)
+        +box-shadow
+    #page4
+        transform: rotateY(-10deg)
+        +box-shadow
+    #page5
+        transform: rotateY(-168deg)
+        +box-shadow
+    #page6
+        transform: rotateY(-165deg)
+        +box-shadow
+    #back
+        transform: rotateY(0deg)
+        +box-shadow
+
+.moveRight
+    transform: translateX(50%)
+
+.title
+    padding: 30px
+
+.flex
+    display: flex
+
+.notVisible
+    display: none
+
+
+@media (max-width: $breakpoint-mobile)
+    body
+        margin: 0
+        // height: 100vh
+        // width: 100vw
+    #book
+        // width: 100vw
+        // height: 100vh
+        padding: none
+        margin: none
+        top: 0
+        // position: absolute
+    .moveRight
+        transform: none
+    .poems
+        #front
+            transform: rotateY(-180deg)
+            +box-shadow
+        #text
+            display: none
+        #page1
+            transform: rotateY(-170deg)
+            +box-shadow
+        #page2
+            transform: rotateY(-5deg)
+            +box-shadow
+        #page3
+            transform: rotateY(-165deg)
+            +box-shadow
+        #page4
+            transform: rotateY(-8deg)
+            +box-shadow
+        #page5
+            transform: rotateY(-160deg)
+            +box-shadow
+        #page6
+            transform: rotateY(-10deg)
+            +box-shadow
+        #back
+            transform: rotateY(0deg)
+            +box-shadow
